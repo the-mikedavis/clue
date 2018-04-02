@@ -147,6 +147,6 @@ compile every time you save a `.scss` file:
 $ sass --watch scss:css
 ```
 
-That converts all the Sass files in the `sass` directory into CSS in the
-`css` directory. So any edits you make to the styling should go in the `sass`
+That converts all the Sass files in the `scss` directory into CSS in the
+`css` directory. So any edits you make to the styling should go in the `scss`
 folder.
