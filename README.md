@@ -59,14 +59,14 @@ Check out [the documentation](https://mozilla.github.io/nunjucks/).
 
 ### This Repo
 
-To download and mess around with this repo, first **clone** it from the
+To download and contribute to this repo, first **clone** it from the
 menu above. You'll also need to have downloaded Node from the link above.
 
 In a shell, `cd` to where you cloned the repo. You'll need to install the
 depedencies from the `package.json`. You can do that with this:
 
 ```shell
-$ npm init
+$ npm install
 ```
 
 Then you can run the server with this:
