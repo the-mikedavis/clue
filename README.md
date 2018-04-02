@@ -97,3 +97,55 @@ $ nodemon -e html,js index.js
 
 That restarts the Node server every time you save a file ending in `.js` or
 `.html`.
+
+### SASS
+
+[Sass](https://sass-lang.com/) is a language that extends and compiles down
+to CSS. It makes producing CSS really easy. The best part is the nested rules,
+which allow you to do this:
+
+```sass
+nav {
+  // some rules for the nav
+  ul {
+    // some rules for the list inside the nav
+    li {
+      // some rules for the list element inside the nav list
+      ... // and so on
+    }
+  }
+}
+```
+
+Which would be this in regular CSS:
+
+```css
+nav {
+  /* some rules for the nav */
+}
+
+nav ul {
+  /* some rules for the list inside the nav */
+}
+
+nav ul li {
+  /* some rules for the list element inside the nav list */
+}
+
+/* ... and so on */
+```
+
+Sass is a _superset_ of CSS, which means that if you write pure CSS in a
+Sass file, it's perfectly fine. Another thing: Sass files usually end in
+`.scss`, which stands for "Sassy CSS."
+
+The docs are [here](https://sass-lang.com/documentation/file.SASS_REFERENCE.html).
+Once you have it installed, you can make Sass watch the directories to
+compile every time you save a `.scss` file:
+
+```shell
+$ sass --watch scss:css
+```
+
+That converts all the Sass files in the `sass` directory into CSS in the
+`css` directory.
