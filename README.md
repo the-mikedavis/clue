@@ -148,4 +148,5 @@ $ sass --watch scss:css
 ```
 
 That converts all the Sass files in the `sass` directory into CSS in the
-`css` directory.
+`css` directory. So any edits you make to the styling should go in the `sass`
+folder.
