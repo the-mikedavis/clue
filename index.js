@@ -1,7 +1,13 @@
-const express = require('express');
+const express = require('express'),
+  nun = require('nunjucks');
 const app = express();
 
-app.get('/search', function (req, res) {
+nun.configure('templates', {
+  autoescape: true,
+  express: app
+});
+
+app.get('/search', function(req, res) {
   res.send(req.query);
 });
 

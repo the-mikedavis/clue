@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    <meta name="viewport" content="width=device,initial-scale=1">
+    <!-- links to favicons, css, etc.. -->
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+  </head>
+
+  <body>
+    <!-- nav goes here -->
+    <div class="main">
+      {% block body %}{% endblock %}
+    </div>
+  </body>
+</html>
