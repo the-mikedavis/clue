@@ -150,3 +150,22 @@ $ sass --watch scss:css
 That converts all the Sass files in the `scss` directory into CSS in the
 `css` directory. So any edits you make to the styling should go in the `scss`
 folder.
+
+## Solr
+
+Installing Solr can't be done on a Linux Machine through `apt`. First install
+java and then solr.
+
+```shell
+$ sudo apt update
+$ sudo apt install default-jdk
+$ cd ~
+$ wget http://apache.claz.org/lucene/solr/7.2.1/solr-7.2.1.tgz
+$ tar zxf solr-7.2.1.tgz
+$ cd solr-7.2.1
+```
+
+Then you can start Solr with `bin/solr start`. This will put Solr on port
+`8983`. Go to the IP of the machine at that port in the browser to get
+the admin landing page. (On my machine that's
+`http://localhost:8983/solr/`).
