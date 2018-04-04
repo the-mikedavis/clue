@@ -23,6 +23,9 @@ $ brew install postgresql
 $ brew install solr
 ```
 
+I think the Windows alternative to brew is [scoop](http://scoop.sh/),
+but it's for PowerShell.
+
 ## Node.js
 
 We'll be using a Node.js server to do some logic and to serve the results
