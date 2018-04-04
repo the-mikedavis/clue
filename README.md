@@ -183,8 +183,8 @@ folder.
 
 ## Solr
 
-Installing Solr can't be done on a Linux Machine through `apt`. First install
-java and then solr.
+Installing Solr can be done on a Linux Machine through `apt`, but you're better
+off getting it yourself from source. First install java and then Solr.
 
 ```shell
 $ sudo apt update
@@ -396,4 +396,3 @@ $ psql -U <username> -d lasflores -f copySQL.sql
 ```
 
 And there you go, now you have all the data.
->>>>>>> Stashed changes
