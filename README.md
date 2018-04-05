@@ -1,6 +1,7 @@
 # Clue
 
 Check out the Wiki to see some stuff on installation and tools to use.
+The documentation on the API is [here](https://lucene.apache.org/solr/guide/7_2/query-syntax-and-parsing.html).
 
 ### This Repo
 
