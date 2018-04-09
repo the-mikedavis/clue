@@ -1,0 +1,121 @@
+body {
+    background: white;
+    color: dimgrey;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 1em 1em 1em;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: lightgrey;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: deepskyblue;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+    background: lightgrey;
+}
+
+.tabs {
+    overflow: hidden;
+}
+
+.tab {
+    float: left;
+    display: block;
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+    width: 33.33%;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+.tabs button:hover {
+    background-color: deepskyblue;
+}
+
+.tabs button.active {
+    background-color: deepskyblue;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px;
+    background-color: whitesmoke;
+}
+
+.result {
+    background-color: lightgrey;
+    width: 100%;
+    overflow: hidden;
+}
+
+.details {
+    background-color: inherit;
+    float: left;
+    width: 70%;
+    padding: 6px 12px;
+}
+
+.preview {
+    background-color: inherit;
+    float: right;
+    width: 20%;
+        padding: 6px 12px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
