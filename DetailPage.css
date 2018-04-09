@@ -1,0 +1,79 @@
+
+/* Add a black background color to the top navigation bar */
+
+
+.navbar-dark{
+	color: black;
+	background: white;
+}
+
+form {
+    margin-left: 900px;
+	margin-top: 8px;
+}
+
+#terr{
+ margin-left: 80px;
+ margin-top: 50px;
+ padding-bottom: 10px;
+ border-bottom-style: solid;
+ border-bottom-width: 2px;
+}
+
+.row {
+	padding-top: 10px;
+margin-left: 80px;
+
+}
+
+
+
+h4{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+body {font-family: Verdana, sans-serif; margin:0}
+
+.d-block {vertical-align: middle;
+height: 500px;
+width: 500px;}
+
+
+#map {vertical-align: middle;
+max-height: 400px;
+max-width: 800px;
+padding-left: 100px;
+margin-top: 40px;
+
+}
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
