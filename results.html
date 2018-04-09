@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Search Results</title>
+    <meta name="description" content="Search Results">
+    <meta name="author" content="Clue">
+    <link rel="stylesheet" href="results.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab" onclick="opentab(event, 'cadastre')">Cadastre Results</button>
+        <button class="tab" onclick="opentab(event, 'media')">Media Results</button>
+        <button class="tab" onclick="opentab(event, 'text')">Text Results</button>
+    </div>
+
+    <div id="cadastre" class="tabcontent">
+        <section>
+            <div class="result">
+                <div class="details">
+                    <h4>Feature 1</h4>
+                    <p>Feature 1 details<br>
+                    Location: x<br>
+                    Shape area: y<br>
+                    Shape length: z</p>
+                </div>
+                <div class="preview">
+                    <img src="76584/139159.png">
+                </div>
+            </div>
+            <br>
+                        <div class="result">
+                <div class="details">
+                    <h4>Feature 2</h4>
+                    <p>Feature 2 details<br>
+                    Location: x<br>
+                    Shape area: y<br>
+                    Shape length: z</p>
+                </div>
+                <div class="preview">
+                    <img src="76584/139160.png">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="media" class="tabcontent">
+        <section>
+            <div class="result">
+                <div class="details">
+                    <h4>Image 1</h4>
+                    <p>Image 1 details<br>
+                    Location: x<br>
+                    Date: y</p>
+                </div>
+                <div class="preview">
+                    <img src="76584/139161.png">
+                </div>
+            </div>
+            <br>
+                        <div class="result">
+                <div class="details">
+                    <h4>Image 2</h4>
+                    <p>Image 2 details<br>
+                    Location: x<br>
+                    Date: y</p>
+                </div>
+                <div class="preview">
+                    <img src="76584/139162.png">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="text" class="tabcontent">
+        <section>
+            <div class="result">
+                <div class="details">
+                    <h4>Text 1</h4>
+                    <p>Text 1 details</p>
+                </div>
+                <div class="preview">
+                </div>
+            </div>
+            <br>
+                        <div class="result">
+                <div class="details">
+                    <h4>Text 2</h4>
+                    <p>Text 2 details</p>
+                </div>
+                <div class="preview">
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+<script>
+    function opentab(evt, tabname) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabname).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</html>
