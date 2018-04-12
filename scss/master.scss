@@ -1,0 +1,38 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  li {
+    float: left;
+
+    a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #111;
+      }
+    }
+    
+    &:last-child {
+      float: right;
+      vertical-align: middle;
+    }
+  }
+}
+
+div.main {
+  padding: 8%;
+}

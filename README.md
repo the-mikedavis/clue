@@ -15,6 +15,12 @@ depedencies from the `package.json`. You can do that with this:
 $ npm install
 ```
 
+Compile the Sass assets with:
+
+```shell
+$ sass --watch scss:static/dist/css
+```
+
 Then you can run the server with this:
 
 ```shell
@@ -22,4 +28,3 @@ $ node index.js
 ```
 
 To edit the server and see how it works, edit `index.js`.
-
