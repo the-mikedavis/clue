@@ -1,9 +1,11 @@
 # Clue
 
-Check out the Wiki to see some stuff on installation and tools to use.
+**Check out the Wiki** to see some stuff on installation and tools to use.
 The documentation on the API is [here](https://lucene.apache.org/solr/guide/7_2/query-syntax-and-parsing.html).
 
 ### This Repo
+
+For presenting and such, follow these instructions.
 
 To download and contribute to this repo, first **clone** it from the
 menu above. You'll also need to have downloaded Node from the link above.
