@@ -1,10 +1,10 @@
-{% from "search.html" import bar %} <!-- searchbar macro -->
+{% from "search.html" import bar %} {# searchbar macro #}
 <!DOCTYPE html>
 <html>
   <head>
     {% block head %}
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!-- links to favicons, css, etc.. -->
+    {# links to favicons, css, etc.. #}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/dist/css/master.css">
     <title>{% block title %}{% endblock %}</title>
@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <!-- Navigation -->
+    {# Navigation #}
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
@@ -22,7 +22,7 @@
       </ul>
     </nav>
 
-    <!-- Content -->
+    {# Content #}
     <div class="main">
       {% block body %}{% endblock %}
     </div>

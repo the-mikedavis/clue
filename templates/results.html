@@ -2,11 +2,12 @@
 {% block title %}Search Results{% endblock %}
 {% block head %}
   {{ super() }}
-  <!-- additional scripts, links, and such... -->
+  {# additional scripts, links, and such... #}
 {% endblock %}
 
 {% block body %}
   <h1>Results</h1>
-  <!-- the results and stuff goes here. This is the main part of the page. -->
-  <p>Your search was: <code>"{{ search }}"</code></p>
+  <p>Your search returned this:</p>
+  <code>{{ docs | dump }}</code> 
+  <p>It found {{ numFound }} results.</p>
 {% endblock %}

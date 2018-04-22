@@ -17,8 +17,20 @@ app.get('/', (req, res) => res.render('index.html') );
 
 // API endpoint here
 app.get('/results', function (req, res) {
-  console.log(req.query);
-  res.render('results.html', req.query);
+  var query = req.query.search;
+  http.get('http://localhost:8983/solr/' + CORE +
+      '/select?q=*:' + escape(query),
+    function (innerRes) {
+      var data = '';
+      innerRes.on('data', chunk => data += chunk);
+      innerRes.on('end', () => {
+        var payload = JSON.parse(data).response;
+        res.render('results.html', payload)
+      });
+    }).on('error', function (err) {
+      // TODO some error handling here (or in the view)
+      res.render('results.html', err);
+    });
 });
 
 // API endpoint here too, for the suggestor module.
@@ -27,10 +39,10 @@ app.get('/suggest', function (req, res) {
   http.get('http://localhost:8983/solr/' + CORE +
       '/suggest?suggest=true&suggest.dictionary=suggester&suggest.q=' +
       escape(query),
-    function (internalRes) {
+    function (innerRes) {
       var data = '';
-      internalRes.on('data', chunk => data += chunk);
-      internalRes.on('end', () => res.send(data));
+      innerRes.on('data', chunk => data += chunk);
+      innerRes.on('end', () => res.send(data));
     }).on('error', (err) => res.send(''));
 });
 
