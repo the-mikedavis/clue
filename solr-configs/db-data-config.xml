@@ -1,0 +1,58 @@
+<dataConfig>
+  <dataSource driver="org.postgresql.Driver"
+    url="jdbc:postgresql://localhost:5432/lasflores"
+    user="michael"
+    password="postgres" />
+  <document name="construction">
+    <entity name="construccion" query="select * from construccion">
+      <field column="id" name="id" />
+      <field column="geom" name="geometry" />
+      <field column="OBJECTID" name="objectID" />
+      <field column="CODIGO" name="codigo" />
+      <field column="TERRENO_CODIGO" name="terrenoCodigo" />
+      <field column="TIPO_CONSTRUCCION" name="tipoConstruccion" />
+      <field column="TIPO_DOMINIO" name="tipoDominio" />
+      <field column="NUMERO_PISOS" name="numeroPisos" />
+      <field column="NUMERO_SOTANOS" name="numeroSotanos" />
+      <field column="NUMERO_MEZANINES" name="numeroMezanines" />
+      <field column="NUMERO_SEMISOTANOS" name="numeroSemisotanos" />
+      <field column="ETIQUETA" name="etiqueta" />
+      <field column="IDENTIFICADOR" name="identificador" />
+      <field column="CODIGO_EDIFICACION" name="codigoEdificacion" />
+      <field column="CODIGO_ANTERIOR" name="codigoAnterior" />
+      <field column="SHAPE.AREA" name="shapeArea" />
+      <field column="SHAPE.LEN" name="shapeLen" />
+      <field column="wkt" name="wellKnownText" />
+    </entity>
+  </document>
+  <document name="terreno">
+    <entity name="terreno" query="select * from terreno">
+      <field column="id" name="id" />
+      <field column="geom" name="geometry" />
+      <field column="OBJECTID" name="objectID" />
+      <field column="CODIGO" name="codigo" />
+      <field column="CODIGO_ANTERIOR" name="codigoAnterior" />
+      <field column="SHAPE.AREA" name="shapeArea" />
+      <field column="SHAPE.LEN" name="shapeLen" />
+      <field column="wkt" name="wellKnownText" />
+    </entity>
+  </document>
+  <document name="workshop_20170210">
+    <entity name="workshop_20170210" query="select * from workshop_20170210">
+      <field column="id" name="id" />
+      <field column="geom" name="geometry" />
+      <field column="codigo" name="codigo" />
+      <field column="fuente" name="fuente" />
+      <field column="wkt" name="wellKnownText" />
+    </entity>
+  </document>
+  <document name="spatial_ref_sys">
+    <entity name="spatial_ref_sys" query="select * from spatial_ref_sys">
+      <field column="srid" name="srid" />
+      <field column="auth_name" name="authName" />
+      <field column="auth_srid" name="authSrid" />
+      <field column="srtext" name="srtext" />
+      <field column="proj4text" name="proj4text" />
+    </entity>
+  </document>
+</dataConfig>
