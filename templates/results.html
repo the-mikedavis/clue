@@ -8,6 +8,6 @@
 {% block body %}
   <h1>Results</h1>
   <p>Your search returned this:</p>
-  <code>{{ docs | dump }}</code> 
+  <code>{{ docs | dump(2) }}</code> 
   <p>It found {{ numFound }} results.</p>
 {% endblock %}
