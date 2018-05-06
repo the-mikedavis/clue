@@ -12,5 +12,9 @@
 }
 
 nav > ul > li:last-child {
-  width: 25%;
+  width: 150px;
+  input {
+    display: inline-block;
+    width: 96px;
+  }
 }

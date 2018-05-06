@@ -10,6 +10,9 @@
   top: -1px; }
 
 nav > ul > li:last-child {
-  width: 25%; }
+  width: 150px; }
+  nav > ul > li:last-child input {
+    display: inline-block;
+    width: 96px; }
 
 /*# sourceMappingURL=search.css.map */

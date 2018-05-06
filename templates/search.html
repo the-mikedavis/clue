@@ -2,14 +2,16 @@
 <link rel="stylesheet" type="text/css" href="/dist/css/search.css">
 <script type="text/javascript" src="/dist/js/search.js"></script>
 <form id="searchForm" action="/results" method="GET">
-  <input id = "searchBar"
+  <input id="searchBar"
          type="text"
          name="search"
          placeholder="{{ defaultText | escape }}"
          oninput='suggest(event)'
+         list="suggestions"
          required/>
        <button id="searchButton" type="submit">
          <i class="fa fa-search"></i>
        </button>
 </form>
+<datalist id="suggestions"></datalist>
 {% endmacro %}
