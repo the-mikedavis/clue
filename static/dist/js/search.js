@@ -1,10 +1,6 @@
 console.log("search.js loaded...");
 
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('searchBar').onchange = suggestionHandler;
-});
-
-function suggestionHandler (event) {
+function suggest (event) {
   var text = event.target.value;
   if (!text) return;
   var httpReq;

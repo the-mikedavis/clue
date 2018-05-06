@@ -3,8 +3,7 @@ const express = require('express'),
   path = require('path'),
   http = require('http'),
   app = express(),
-
-  CORE = 'lasflores'; //TODO temporary core name from Solr
+  CORE = 'lasflores';
 
 nun.configure('templates', {
   autoescape: true,
