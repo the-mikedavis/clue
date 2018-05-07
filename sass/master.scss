@@ -68,6 +68,9 @@ div.document {
   border-radius: 3px;
   padding: 20px 5%;
   margin: 20px 0;
+  &.selected {
+    border: 1px dotted #28A745;
+  }
 }
 
 div.tab {
