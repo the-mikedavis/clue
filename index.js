@@ -3,7 +3,7 @@ const express = require('express'),
   path = require('path'),
   http = require('http'),
   app = express(),
-  CORE = 'lasflores';
+  CORE = 'clue';
 
 nun.configure('templates', {
   autoescape: true,
@@ -18,7 +18,7 @@ app.get('/', (req, res) => res.render('index.html') );
 app.get('/results', function (req, res) {
   var query = req.query.search;
   http.get('http://localhost:8983/solr/' + CORE +
-      '/select?q=*:' + escape(query),
+      '/select?q=' + escape('*' + query + '*'),
     function (innerRes) {
       var data = '';
       innerRes.on('data', chunk => data += chunk);
@@ -26,9 +26,6 @@ app.get('/results', function (req, res) {
         var payload = JSON.parse(data).response;
         res.render('results.html', payload)
       });
-    }).on('error', function (err) {
-      // TODO some error handling here (or in the view)
-      res.render('results.html', err);
     });
 });
 
@@ -42,7 +39,7 @@ app.get('/suggest', function (req, res) {
       var data = '';
       innerRes.on('data', chunk => data += chunk);
       innerRes.on('end', () => res.send(data));
-    }).on('error', (err) => res.send(''));
+    }).on('error', (err) => res.send('error!'));
 });
 
 app.listen(3000, () => console.log('Listening on port 3000!'));

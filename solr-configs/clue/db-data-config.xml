@@ -1,0 +1,32 @@
+<dataConfig>
+  <dataSource type="JdbcDataSource"
+    driver="com.mysql.jdbc.Driver"
+    url="jdbc:mysql://localhost:3306/clue"
+    user="root"
+    password="hello_world" />
+  <document name="sanpedro">
+    <entity name="sanpedro" query="select * from sanpedro">
+      <field column="id" name="id" />
+      <field column="title" name="title_text" />
+      <field column="creator" name="creator_text" />
+      <field column="subject" name="subject_text" />
+      <field column="description" name="description_text" />
+      <field column="publisher" name="publisher_text" />
+      <field column="contributors" name="contributors_text" />
+      <field column="date" name="date_text" />
+      <field column="type" name="type_text" />
+      <field column="format" name="format_text" />
+      <field column="identifier" name="identifier_text" />
+      <field column="source" name="source_text" />
+      <field column="language" name="language_text" />
+      <field column="relation" name="relation_text" />
+      <field column="coverage" name="coverage_text" />
+      <field column="rights" name="rights_text" />
+      <field column="resolution" name="resolution_text" />
+      <field column="file_size" name="file_size_text" />
+      <field column="duration" name="duration" />
+      <field column="file_name" name="file_name_text" />
+      <field column="full_file_name" name="full_file_name_text" />
+    </entity>
+  </document>
+</dataConfig>

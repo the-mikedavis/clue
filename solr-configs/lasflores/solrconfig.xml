@@ -278,7 +278,7 @@
       <str name="dictionaryImpl">DocumentDictionaryFactory</str>
       <str name="buildOnStartup">true</str>
       <str name="suggestAnalyzerFieldType">string</str>
-      <str name="field">id</str>
+      <str name="field">_text_</str>
     </lst>
   </searchComponent>
   <!-- Suggest Request Handler -->

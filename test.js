@@ -4,7 +4,7 @@ const express = require('express'),
   http = require('http'),
   app = express(),
 
-  CORE = 'lasflores'; //TODO temporary core name from Solr
+  CORE = 'clue';
 
 nun.configure('templates', {
   autoescape: true,
@@ -18,125 +18,7 @@ app.get('/', (req, res) => res.render('index.html') );
 // API endpoint here
 app.get('/results', function (req, res) {
   var query = req.query.search;
-  var response = {
-      "responseHeader":{
-            "status":0,
-            "QTime":0,
-            "params":{
-                    "q":"*:*",
-                    "_":"1524421366911"}},
-      "response":{"numFound":2388,"start":0,"docs":[
-              {
-                        "numeroMezanines":0,
-                        "numeroSotanos":0,
-                        "numeroSemisotanos":0,
-                        "objectID":8865510,
-                        "numeroPisos":1,
-                        "codigo":["080010113000000670067500000001"],
-                        "id":"1",
-                        "tipoConstruccion":"CONVENCIONAL",
-                        "terrenoCodigo":"080010113000000670067000000000",
-                        "_version_":1597298719298945024},
-              {
-                        "numeroMezanines":0,
-                        "numeroSotanos":0,
-                        "numeroSemisotanos":0,
-                        "objectID":8866105,
-                        "numeroPisos":1,
-                        "codigo":["080010113000000660010500000053"],
-                        "id":"2",
-                        "tipoConstruccion":"CONVENCIONAL",
-                        "terrenoCodigo":"080010113000000660010000000000",
-                        "_version_":1597298719307333632},
-              {
-                        "numeroMezanines":0,
-                        "numeroSotanos":0,
-                        "numeroSemisotanos":0,
-                        "objectID":8864494,
-                        "numeroPisos":1,
-                        "codigo":["080010113000000660010500000050"],
-                        "id":"3",
-                        "tipoConstruccion":"CONVENCIONAL",
-                        "terrenoCodigo":"080010113000000660010000000000",
-                        "_version_":1597298719307333633},
-              {
-                        "numeroMezanines":0,
-                        "numeroSotanos":0,
-                        "numeroSemisotanos":0,
-                        "objectID":8909995,
-                        "numeroPisos":1,
-                        "codigo":["080010113000000640087000000000"],
-                        "id":"4",
-                        "tipoConstruccion":"CONVENCIONAL",
-                        "terrenoCodigo":"080010113000000640087000000000",
-                        "_version_":1597298719307333634},
-              {
-                        "numeroMezanines":0,
-                        "numeroSotanos":0,
-                        "numeroSemisotanos":0,
-                        "objectID":8917125,
-                        "numeroPisos":1,
-                        "codigo":["080010113000000640094000000000"],
-                        "id":"5",
-                        "tipoConstruccion":"CONVENCIONAL",
-                        "terrenoCodigo":"080010113000000640094000000000",
-                        "_version_":1597298719308382208},
-              {
-                        "numeroMezanines":0,
-                        "numeroSotanos":0,
-                        "numeroSemisotanos":0,
-                        "objectID":8855064,
-                        "numeroPisos":1,
-                        "codigo":["080010113000000660010500000021"],
-                        "id":"6",
-                        "tipoConstruccion":"CONVENCIONAL",
-                        "terrenoCodigo":"080010113000000660010000000000",
-                        "_version_":1597298719308382209},
-              {
-                        "numeroMezanines":0,
-                        "numeroSotanos":0,
-                        "numeroSemisotanos":0,
-                        "objectID":8866598,
-                        "numeroPisos":1,
-                        "codigo":["080010113000000660010500000026"],
-                        "id":"7",
-                        "tipoConstruccion":"CONVENCIONAL",
-                        "terrenoCodigo":"080010113000000660010000000000",
-                        "_version_":1597298719308382210},
-              {
-                        "numeroMezanines":0,
-                        "numeroSotanos":0,
-                        "numeroSemisotanos":0,
-                        "objectID":8854925,
-                        "numeroPisos":1,
-                        "codigo":["080010113000001240005000000000"],
-                        "id":"8",
-                        "tipoConstruccion":"CONVENCIONAL",
-                        "terrenoCodigo":"080010113000001240005000000000",
-                        "_version_":1597298719308382211},
-              {
-                        "numeroMezanines":0,
-                        "numeroSotanos":0,
-                        "numeroSemisotanos":0,
-                        "objectID":8917726,
-                        "numeroPisos":1,
-                        "codigo":["080010113000000640080500000001"],
-                        "id":"9",
-                        "tipoConstruccion":"NO CONVENCIONAL",
-                        "terrenoCodigo":"080010113000000640080000000000",
-                        "_version_":1597298719308382212},
-              {
-                        "numeroMezanines":0,
-                        "numeroSotanos":0,
-                        "numeroSemisotanos":0,
-                        "objectID":8864495,
-                        "numeroPisos":1,
-                        "codigo":["080010113000000660010500000029"],
-                        "id":"10",
-                        "tipoConstruccion":"CONVENCIONAL",
-                        "terrenoCodigo":"080010113000000660010000000000",
-                        "_version_":1597298719308382213}]
-          }};
+  var response = [ { "coverage_text": [ "25.76168,-80.19179" ], "text": [ "25.76168,-80.19179", "Frank Lloyd Wright", "Also known as the Kaufmann Residence, the Fallingwater is by many regarded as the most beautiful of all Frank Lloyd Wright houses. And it isn’t hard to understand why. The spectacular house was built between 1936 and 1938 over a small waterfall in Fayette County, Pennsylvania. It served as a summer retreat of Edgar J. Kaufmann and his family until 1963 when it was bestowed to the Western Pennsylvania Conservancy which shortly thereafter opened it to the public.", "Fallingwater" ], "creator_text": [ "Frank Lloyd Wright" ], "description_text": [ "Also known as the Kaufmann Residence, the Fallingwater is by many regarded as the most beautiful of all Frank Lloyd Wright houses. And it isn’t hard to understand why. The spectacular house was built between 1936 and 1938 over a small waterfall in Fayette County, Pennsylvania. It served as a summer retreat of Edgar J. Kaufmann and his family until 1963 when it was bestowed to the Western Pennsylvania Conservancy which shortly thereafter opened it to the public." ], "title_text": [ "Fallingwater" ], "id": "1", "_version_": 1599781650341822500 }, { "coverage_text": [ "25.76168,-75.19179" ], "text": [ "25.76168,-75.19179", "Frank Lloyd Wright", "Also known as the Aline Barnsdall Hollyhock House, this Wright’s home was designed for the American oil heiress Aline Barnsdall in Hollywood, Los Angeles. Constructed between 1919 and 1921, the Hollyhock House was conceived as a part of a larger project but the planned arts and theater complex was never completed. In 1927, Barnsdall donated her home and property to the city of Los Angeles to be used as a public art park. In 1997, the Mayan Revival style house was designated as a National Historic Landmark. It was later also added to the Frank Lloyd Wright Buildings that have been nominated for the inclusion to the World Heritage Sites list.", "Hollyhock" ], "creator_text": [ "Frank Lloyd Wright" ], "description_text": [ "Also known as the Aline Barnsdall Hollyhock House, this Wright’s home was designed for the American oil heiress Aline Barnsdall in Hollywood, Los Angeles. Constructed between 1919 and 1921, the Hollyhock House was conceived as a part of a larger project but the planned arts and theater complex was never completed. In 1927, Barnsdall donated her home and property to the city of Los Angeles to be used as a public art park. In 1997, the Mayan Revival style house was designated as a National Historic Landmark. It was later also added to the Frank Lloyd Wright Buildings that have been nominated for the inclusion to the World Heritage Sites list." ], "title_text": [ "Hollyhock" ], "id": "2", "_version_": 1599781650344968200 }, { "coverage_text": [ "25.76168,-70.19179" ], "text": [ "25.76168,-70.19179", "Frank Lloyd Wright", "The Frank Lloyd Wright Home and Studio, located at Chicago Avenue in Oak Park, Illinois, was the famous architect’s residence and studio. He lived and worked here for two decades (from 1889 until 1909) during which he designed over 150 buildings, largely residential ones. In 2012, the architect’s former home and studio was acquired by the Frank Lloyd Wright Preservation Trust, a non-for-profit organization dedicated to preservation of the architect’s masterpieces and presenting his legacy to the public.", "Frank Lloyd Wright Home and Studio" ], "creator_text": [ "Frank Lloyd Wright" ], "description_text": [ "The Frank Lloyd Wright Home and Studio, located at Chicago Avenue in Oak Park, Illinois, was the famous architect’s residence and studio. He lived and worked here for two decades (from 1889 until 1909) during which he designed over 150 buildings, largely residential ones. In 2012, the architect’s former home and studio was acquired by the Frank Lloyd Wright Preservation Trust, a non-for-profit organization dedicated to preservation of the architect’s masterpieces and presenting his legacy to the public." ], "title_text": [ "Frank Lloyd Wright Home and Studio" ], "id": "3", "_version_": 1599781650346016800 }, { "coverage_text": [ "25.76168,-65.19179" ], "text": [ "25.76168,-65.19179", "Frank Lloyd Wright", "Listed in the U.S. National Register of Historic Places, designated as a National Historic Landmark and added to the Frank Lloyd Wright Buildings that are nominated for inclusion to the UNESCO World Heritage Sites list, the Robie House is considered to be the finest Wright’s Prairie style house. Located in Hyde Park, Chicago, the house was built between 1908 and 1910 for the Robie family who, however, didn’t enjoy their new home for long. The house changed its owners several times before it was in 1997 acquired by the Frank Lloyd Wright Preservation Trust that had it restored and opened to the public.", "Robie House" ], "creator_text": [ "Frank Lloyd Wright" ], "description_text": [ "Listed in the U.S. National Register of Historic Places, designated as a National Historic Landmark and added to the Frank Lloyd Wright Buildings that are nominated for inclusion to the UNESCO World Heritage Sites list, the Robie House is considered to be the finest Wright’s Prairie style house. Located in Hyde Park, Chicago, the house was built between 1908 and 1910 for the Robie family who, however, didn’t enjoy their new home for long. The house changed its owners several times before it was in 1997 acquired by the Frank Lloyd Wright Preservation Trust that had it restored and opened to the public." ], "title_text": [ "Robie House" ], "id": "4", "_version_": 1599781650347065300 }, { "coverage_text": [ "25.76168,-60.19179" ], "text": [ "25.76168,-60.19179", "Frank Lloyd Wright", "Wright built the Taliesin West in 1937 as his winter residence, studio and architectural school but the original building continued to be changed and expanded with new structures, many of which were designed by the architect’s students. Today, the Wright’s winter residence in Scottsdale, Arizona, is home to the Frank Lloyd Wright Foundation and the campus of the Frank Lloyd Wright School of Architecture but it is also open to public viewing.", "Taliesin West" ], "creator_text": [ "Frank Lloyd Wright" ], "description_text": [ "Wright built the Taliesin West in 1937 as his winter residence, studio and architectural school but the original building continued to be changed and expanded with new structures, many of which were designed by the architect’s students. Today, the Wright’s winter residence in Scottsdale, Arizona, is home to the Frank Lloyd Wright Foundation and the campus of the Frank Lloyd Wright School of Architecture but it is also open to public viewing." ], "title_text": [ "Taliesin West" ], "id": "5", "_version_": 1599781650348114000 }, { "coverage_text": [ "25.76168,-55.19179" ], "text": [ "25.76168,-55.19179", "Frank Lloyd Wright", "Built for Charles and Mabel Ennis in 1924, the Ennis House is the last of four Wright’s textile block houses. The house reveals a strong influence of the ancient Mayan architecture and is often cited as one of the finest examples of the Mayan Revival style that was popular in the 1920s and 1930s. Since 2011, the Ennis House has been owned by the American businessman Ron Burkle. But before the ownership was transferred from the Ennis House Foundation, Burkle agreed to open his new home in Los Angeles for public viewing 12 days a year.", "Ennis House" ], "creator_text": [ "Frank Lloyd Wright" ], "description_text": [ "Built for Charles and Mabel Ennis in 1924, the Ennis House is the last of four Wright’s textile block houses. The house reveals a strong influence of the ancient Mayan architecture and is often cited as one of the finest examples of the Mayan Revival style that was popular in the 1920s and 1930s. Since 2011, the Ennis House has been owned by the American businessman Ron Burkle. But before the ownership was transferred from the Ennis House Foundation, Burkle agreed to open his new home in Los Angeles for public viewing 12 days a year." ], "title_text": [ "Ennis House" ], "id": "6", "_version_": 1599781650349162500 }, { "coverage_text": [ "25.76168,-50.19179" ], "text": [ "25.76168,-50.19179", "Frank Lloyd Wright", "The Nathan G. Moore House or the Moore-Dugal Residence was built twice by the famous architect. In 1895, Wright built the house in Tudor Revival style as asked by its owner Nathan G. Moore. After it had been damaged by a fire almost three decades later, he was asked to rebuilt it. While incorporating elements of the Tudor style, this time the architect also added his own distinct touch. The house not far from the Frank Lloyd Wright Home and Studio in Oak Park, Illinois, is currently home to the Dugal family.", "Nathon G. Moore House" ], "creator_text": [ "Frank Lloyd Wright" ], "description_text": [ "The Nathan G. Moore House or the Moore-Dugal Residence was built twice by the famous architect. In 1895, Wright built the house in Tudor Revival style as asked by its owner Nathan G. Moore. After it had been damaged by a fire almost three decades later, he was asked to rebuilt it. While incorporating elements of the Tudor style, this time the architect also added his own distinct touch. The house not far from the Frank Lloyd Wright Home and Studio in Oak Park, Illinois, is currently home to the Dugal family." ], "title_text": [ "Nathon G. Moore House" ], "id": "7", "_version_": 1599781650350211000 }, { "coverage_text": [ "25.76168,-45.19179" ], "text": [ "25.76168,-45.19179", "Frank Lloyd Wright", "The Arthur Heurtley House, located in Oak Park, Illinois, is one of the first Wright’s Prairie houses. Built in 1902 for the Heurtley family, the house changed several owners who kept on altering it. In the late 1990s, its current owners Ed and Diana Baehren had it restored to its original appearance. In 2000, when the $1.2 million restoration works were nearing the end, the house was inscribed to the U.S. National Register of Historic Places and designated as a National Historic Landmark.", "Arthur Heurtley House" ], "creator_text": [ "Frank Lloyd Wright" ], "description_text": [ "The Arthur Heurtley House, located in Oak Park, Illinois, is one of the first Wright’s Prairie houses. Built in 1902 for the Heurtley family, the house changed several owners who kept on altering it. In the late 1990s, its current owners Ed and Diana Baehren had it restored to its original appearance. In 2000, when the $1.2 million restoration works were nearing the end, the house was inscribed to the U.S. National Register of Historic Places and designated as a National Historic Landmark." ], "title_text": [ "Arthur Heurtley House" ], "id": "8", "_version_": 1599781650351259600 }, { "coverage_text": [ "25.76168,-40.19179" ], "text": [ "25.76168,-40.19179", "Frank Lloyd Wright", "The F. F. Tomek House, also referred to as the Ship House is an early example of Frank Lloyd Wright Prairie houses. Built for Ferdinand Frederick and Emily Tomek in 1906 (designed in 1904), the house in Riverside, Illinois, changed several owners (the Tomeks sold it in 1924) but it remained beautifully preserved thanks to an extensive restoration in the 1970s. In 1999, it was designated as the U.S. National Historic Landmark.", "F. F. Tomek House" ], "creator_text": [ "Frank Lloyd Wright" ], "description_text": [ "The F. F. Tomek House, also referred to as the Ship House is an early example of Frank Lloyd Wright Prairie houses. Built for Ferdinand Frederick and Emily Tomek in 1906 (designed in 1904), the house in Riverside, Illinois, changed several owners (the Tomeks sold it in 1924) but it remained beautifully preserved thanks to an extensive restoration in the 1970s. In 1999, it was designated as the U.S. National Historic Landmark." ], "title_text": [ "F. F. Tomek House" ], "id": "9", "_version_": 1599781650352308200 }, { "coverage_text": [ "25.76168,-35.19179" ], "text": [ "25.76168,-35.19179", "Frank Lloyd Wright", "Also called the Airplane House, the Eugene A. Gilmore House is another typical Wright’s Prairie style house. It was designed for Eugene A. Gilmore who was at the time law professor at the University of Wisconsin Law School. Completed in 1908, the Eugene A. Gilmore House is located in the University Heights Historic District in Madison, Wisconsin. In 1972, it was added to the U.S. National Register of Historic Places.", "Eugene A. Gilmore House" ], "creator_text": [ "Frank Lloyd Wright" ], "description_text": [ "Also called the Airplane House, the Eugene A. Gilmore House is another typical Wright’s Prairie style house. It was designed for Eugene A. Gilmore who was at the time law professor at the University of Wisconsin Law School. Completed in 1908, the Eugene A. Gilmore House is located in the University Heights Historic District in Madison, Wisconsin. In 1972, it was added to the U.S. National Register of Historic Places." ], "title_text": [ "Eugene A. Gilmore House" ], "id": "10", "_version_": 1599781650353356800 } ];
   res.render('results.html', response.response);
 });
 
