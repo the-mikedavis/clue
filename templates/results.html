@@ -2,12 +2,31 @@
 {% block title %}Search Results{% endblock %}
 {% block head %}
   {{ super() }}
-  {# additional scripts, links, and such... #}
 {% endblock %}
 
 {% block body %}
   <h1>Results</h1>
-  <p>Your search returned this:</p>
-  <code>{{ docs | dump(2) }}</code> 
-  <p>It found {{ numFound }} results.</p>
+  <ul class="tab-buttons">
+    <li class="location">Locations</li>
+    <li class="media">Media</li>
+    <li class="text">Text</li>
+  </ul>
+
+  <div class="tab location">
+    {% for doc in docs %}
+      {% for name, item in doc %}
+        {% if name !== 'text' and name !== 'id' and name !== '_version_' %}
+          <p>{{name | replace('_text', '')}}: {{item}}</p>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+
+  <div class="tab media">
+  </div>
+
+  <div class="tab text">
+  </div>
+
+  <p>Found {{ docs.length }} result{{ "" if docs.length == 1 else "s" }}.</p>
 {% endblock %}
