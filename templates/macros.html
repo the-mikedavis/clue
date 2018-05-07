@@ -1,12 +1,16 @@
+{% macro disp(name, item) %}
+  {% if name !== 'text' and name !== '_version_' %}
+  <p class="{{ "title" if (name == 'title_text' or name == 'description_text') else ""}}"><b>{{name | replace('_text', '')}}</b>: {{item}}</p>
+  {% endif %}
+{% endmacro %}
+
 {% macro location(doc) %}
 {% if doc.type_text == 'location' %}
   <div class="document">
     <div class="copy">
-      {% for name, item in doc %}
-        {% if name !== 'text' and name !== '_version_' %}
-          <p>{{name | replace('_text', '')}}: {{item}}</p>
-        {% endif %}
-      {% endfor %}
+    {% for name, item in doc %}
+      {{ disp(name, item) }}
+    {% endfor %}
     </div>
     {% if doc.coverage_text %}
     <div class="map" data="{{ doc.coverage_text }}"></div>
@@ -18,12 +22,10 @@
 {% macro media(doc) %}
 {% if doc.type_text == 'media' %}
   <div class="document">
-    <div class="copy"
-      {% for name, item in doc %}
-        {% if name !== 'text' and name !== '_version_' %}
-          <p>{{name | replace('_text', '')}}: {{item}}</p>
-        {% endif %}
-      {% endfor %}
+    <div class="copy">
+    {% for name, item in doc %}
+      {{ disp(name, item) }}
+    {% endfor %}
     </div>
     <img src="{{ doc.full_file_name_text }}" height="200px" width="200px" />
   </div>
@@ -34,9 +36,7 @@
 {% if doc.type_text != 'location' and doc.type_text != 'media' %}
   <div class="document">
     {% for name, item in doc %}
-      {% if name !== 'text' and name !== '_version_' %}
-        <p>{{name | replace('_text', '')}}: {{item}}</p>
-      {% endif %}
+      {{ disp(name, item) }}
     {% endfor %}
   </div>
 {% endif %}

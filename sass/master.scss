@@ -73,24 +73,36 @@ div.document {
   border-radius: 3px;
   padding: 20px 5%;
   margin: 20px 0;
+  min-height: 200px;
+
   &.selected {
     border: 1px dotted #28A745;
+    div.copy p {
+      display: block;
+    }
   }
 
   div.copy {
     width: calc(100% - 201px);
+    display: inline-block;
+    p {
+      display: none;
+      &.title {
+        display: block;
+      }
+    }
   }
 
   div.map {
     width: 200px;
     height: 200px;
     float: right;
-    top: -200px;
+    display: inline-block;
+    //top: -200px;
   }
   img {
     float: right;
-    position: relative;
-    top: -200px;
+    display: inline-block;
   }
 }
 
