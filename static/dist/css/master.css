@@ -25,4 +25,35 @@ nav li {
 div.main {
   padding: 8%; }
 
+ul.tab-buttons {
+  padding: 0;
+  list-style-type: none; }
+  ul.tab-buttons li {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 2px;
+    min-height: 40px;
+    line-height: 2.5; }
+    ul.tab-buttons li:hover {
+      background-color: #222;
+      color: white;
+      cursor: pointer;
+      -webkit-cursor: pointer; }
+    ul.tab-buttons li.active {
+      background-color: #222;
+      color: white; }
+
+div.document {
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 20px 5%;
+  margin: 20px 0; }
+
+div.tab {
+  display: none; }
+  div.tab.active {
+    display: initial; }
+
 /*# sourceMappingURL=master.css.map */

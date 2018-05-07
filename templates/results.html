@@ -1,3 +1,4 @@
+{% from "macros.html" import location %}
 {% extends "base.html" %}
 {% block title %}Search Results{% endblock %}
 {% block head %}
@@ -7,18 +8,14 @@
 {% block body %}
   <h1>Results</h1>
   <ul class="tab-buttons">
-    <li class="location">Locations</li>
+    <li class="location active">Locations</li>
     <li class="media">Media</li>
     <li class="text">Text</li>
   </ul>
 
-  <div class="tab location">
+  <div class="tab location active">
     {% for doc in docs %}
-      {% for name, item in doc %}
-        {% if name !== 'text' and name !== 'id' and name !== '_version_' %}
-          <p>{{name | replace('_text', '')}}: {{item}}</p>
-        {% endif %}
-      {% endfor %}
+      {{ location(doc) }}
     {% endfor %}
   </div>
 

@@ -37,3 +37,42 @@ div.main {
   padding: 8%;
 }
 
+ul.tab-buttons {
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 2px;
+    min-height: 40px;
+    line-height: 2.5;
+
+    &:hover {
+      background-color: #222;
+      color: white;
+      cursor: pointer;
+      -webkit-cursor: pointer;
+    }
+
+    &.active {
+      background-color: #222;
+      color: white;
+    }
+  }
+}
+
+div.document {
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 20px 5%;
+  margin: 20px 0;
+}
+
+div.tab {
+  display: none;
+  &.active {
+    display: initial;
+  }
+}

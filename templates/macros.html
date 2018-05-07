@@ -1,0 +1,9 @@
+{% macro location(doc) %}
+  <div class="document">
+  {% for name, item in doc %}
+    {% if name !== 'text' and name !== 'id' and name !== '_version_' %}
+      <p>{{name | replace('_text', '')}}: {{item}}</p>
+    {% endif %}
+  {% endfor %}
+  </div>
+{% endmacro %}
