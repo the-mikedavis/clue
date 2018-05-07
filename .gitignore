@@ -2,3 +2,5 @@ node_modules
 *.swp
 .sass-cache
 *.map
+
+static/dist/css

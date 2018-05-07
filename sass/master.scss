@@ -75,21 +75,22 @@ div.document {
   margin: 20px 0;
   min-height: 200px;
 
-  &.selected {
-    border: 1px dotted #28A745;
-    div.copy p {
+  div.copy {
+    width: calc(100% - 201px);
+    display: inline-block;
+  }
+
+  p {
+    display: none;
+    &.title {
       display: block;
     }
   }
 
-  div.copy {
-    width: calc(100% - 201px);
-    display: inline-block;
+  &.selected {
+    border: 1px dotted #28A745;
     p {
-      display: none;
-      &.title {
-        display: block;
-      }
+      display: block;
     }
   }
 
@@ -98,7 +99,6 @@ div.document {
     height: 200px;
     float: right;
     display: inline-block;
-    //top: -200px;
   }
   img {
     float: right;
