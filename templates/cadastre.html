@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Cadastre{% endblock %}
+{% block head %}
+  {{ super() }}
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvQTkRucJxFbcJ8ikHMdaKzHEaWiBCPhY">
+  </script>
+  <script type="text/javascript" src="/dist/js/map.js"></script>
+{% endblock %}
+
+{% block body %}
+<h1>Magical Cadastre</h1>
+<div class="map" data="{{ loc }}">
+</div>
+{% endblock %}

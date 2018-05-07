@@ -63,6 +63,11 @@ ul.tab-buttons {
   }
 }
 
+div.map {
+  height: 500px;
+  width: 500px;
+}
+
 div.document {
   background-color: #eee;
   border-radius: 3px;
@@ -70,6 +75,22 @@ div.document {
   margin: 20px 0;
   &.selected {
     border: 1px dotted #28A745;
+  }
+
+  div.copy {
+    width: calc(100% - 201px);
+  }
+
+  div.map {
+    width: 200px;
+    height: 200px;
+    float: right;
+    top: -200px;
+  }
+  img {
+    float: right;
+    position: relative;
+    top: -200px;
   }
 }
 

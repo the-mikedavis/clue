@@ -45,6 +45,10 @@ ul.tab-buttons {
       background-color: #222;
       color: white; }
 
+div.map {
+  height: 500px;
+  width: 500px; }
+
 div.document {
   background-color: #eee;
   border-radius: 3px;
@@ -52,6 +56,17 @@ div.document {
   margin: 20px 0; }
   div.document.selected {
     border: 1px dotted #28A745; }
+  div.document div.copy {
+    width: calc(100% - 201px); }
+  div.document div.map {
+    width: 200px;
+    height: 200px;
+    float: right;
+    top: -200px; }
+  div.document img {
+    float: right;
+    position: relative;
+    top: -200px; }
 
 div.tab {
   display: none; }

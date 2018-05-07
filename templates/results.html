@@ -1,8 +1,12 @@
-{% from "macros.html" import location %}
+{% from "macros.html" import location, media, txt %}
 {% extends "base.html" %}
 {% block title %}Search Results{% endblock %}
 {% block head %}
   {{ super() }}
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvQTkRucJxFbcJ8ikHMdaKzHEaWiBCPhY">
+  </script>
+  <script type="text/javascript" src="/dist/js/map.js"></script>
 {% endblock %}
 
 {% block body %}
@@ -20,10 +24,18 @@
   </div>
 
   <div class="tab media">
+    {% for doc in docs %}
+      {{ media(doc) }}
+    {% endfor %}
   </div>
 
   <div class="tab text">
+    {% for doc in docs %}
+      {{ txt(doc) }}
+    {% endfor %}
   </div>
 
   <p>Found {{ docs.length }} result{{ "" if docs.length == 1 else "s" }}.</p>
+
+  <button onclick="">Download Selected Results</button>
 {% endblock %}

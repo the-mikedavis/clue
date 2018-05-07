@@ -42,4 +42,9 @@ app.get('/suggest', function (req, res) {
     }).on('error', (err) => res.send('error!'));
 });
 
+app.get('/cadastre', function (req, res) {
+  var query = req.query;
+  res.render('cadastre.html', query);
+});
+
 app.listen(3000, () => console.log('Listening on port 3000!'));

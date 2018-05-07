@@ -4,9 +4,26 @@ window.addEventListener('load', function () {
     tabbtns[i].onclick = clickTab;
 
   var docs = document.getElementsByClassName('document');
-  for (var i = 0; i < docs.length; i++)
+  for (var i = 0; i < docs.length; i++) {
     docs[i].onclick = addToSelection;
+    docs[i].ondblclick = dblClick;
+  }
 });
+
+function dblClick(evt) {
+  // bubble
+  var el = evt.target;
+  while (el != null) {
+    if (el.classList && el.classList.contains('document'))
+      break;
+    el = el.parentElement;
+  }
+
+  var children = el.childNodes;
+  for (var i = 0; i < children.length; i++)
+    if (children[i].classList && children[i].classList.contains('map'))
+      window.location = '/cadastre?loc=' +escape(children[i].getAttribute('data'));
+}
 
 function clickTab(evt) {
   if (evt.target.classList.contains('active'))
@@ -31,6 +48,7 @@ function addToSelection (evt) {
       break;
     el = el.parentElement;
   }
+  // toggle class
   if (el == null)
     return;
   else if (el.classList.contains('selected'))
